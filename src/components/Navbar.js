@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useState} from 'react'
 import styled  from 'styled-components'
 import { MenuOutlined, CloseOutlined } from '@ant-design/icons';
-import { useState } from 'react';
+import {
+    Link
+  } from "react-router-dom";
 
 
 function Navbar() {
@@ -9,20 +11,20 @@ function Navbar() {
 
   return (
         <Nav>
-            <Logo>Predictioner</Logo>
+            <Logo><Link to="/">Predictioner</Link></Logo>
             <Menus>
-                <Firstlink>Daily Horoscope</Firstlink>
-                <Secondlink>Birth Rashi</Secondlink>
-                <Thirdlink>Birth Day</Thirdlink>
-                <Fourthlink>Indian Name Calculator</Fourthlink>
+                <Firstlink><Link to="/daily-horoscope">Daily Horoscope</Link></Firstlink>
+                <Secondlink><Link to="/birth-rashi">Birth Rashi</Link></Secondlink>
+                <Thirdlink><Link to="/birth-day">Birth Day</Link></Thirdlink>
+                <Fourthlink><Link to="/indian-name-calculator">Indian Name Calculator</Link></Fourthlink>
             </Menus>
             <Sidebar><CustomMenu onClick={()=>setBurgerStatus(true)} /></Sidebar>
             <BurgerNav show={burgerStatus}>
                 <CloseWrapper><CustomClose onClick={()=>setBurgerStatus(false)} /></CloseWrapper>
-                <li><a href="#">Daily Horoscope</a></li>
-                <li><a href="#">Birth Rashi</a></li>
-                <li><a href="#">Birth Day</a></li>
-                <li><a href="#">Indian Name Calculator</a></li>
+                <li><Link to="/daily-horoscope">Daily Horoscope</Link></li>
+                <li><Link to="/birth-rashi">Birth Rashi</Link></li>
+                <li><Link to="/birth-day">Birth Day</Link></li>
+                <li><Link to="/indian-name-calculator">Indian Name Calculator</Link></li>
             </BurgerNav>
         </Nav>
   )
@@ -46,6 +48,11 @@ const Logo = styled.div`
     font-size: 1.7rem;
     font-weight: 700;
     font-family: 'Baloo Bhaijaan 2', cursive;
+    a{
+        text-decoration: none;
+        underline: none;
+        color: black;
+    }
 `;
 const Menus = styled.div`
     //border: 1px solid black;
@@ -65,6 +72,11 @@ const Firstlink = styled.div`
     align-items: center;
     font-size: 1.09rem;
     font-weight: 500;
+    a{
+        text-decoration: none;
+        underline: none;
+        color: black;
+    }
 `;
 const Secondlink = styled.div`
     //border: 1px solid blue;
@@ -74,6 +86,11 @@ const Secondlink = styled.div`
     align-items: center;
     font-size: 1.09rem;
     font-weight: 500;
+    a{
+        text-decoration: none;
+        underline: none;
+        color: black;
+    }
 `;
 const Thirdlink = styled.div`
     //border: 1px solid blue;
@@ -83,6 +100,11 @@ const Thirdlink = styled.div`
     align-items: center;
     font-size: 1.09rem;
     font-weight: 500;
+    a{
+        text-decoration: none;
+        underline: none;
+        color: black;
+    }
 `;
 const Fourthlink = styled.div`
     //border: 1px solid blue;
@@ -92,6 +114,11 @@ const Fourthlink = styled.div`
     align-items: center;
     font-size: 1.09rem;
     font-weight: 500;
+    a{
+        text-decoration: none;
+        underline: none;
+        color: black;
+    }
 `;
 
 const Sidebar = styled.div`

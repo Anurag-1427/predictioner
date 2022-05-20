@@ -2,6 +2,7 @@ import React from 'react'
 import styled, { keyframes } from 'styled-components'
 import rasi_chakra from '../../src/rasi_chakra.png'
 import Navbar from './Navbar';
+import { Link } from 'react-router-dom'
 
 function Home() {
   return (
@@ -24,10 +25,10 @@ function Home() {
                 &copy; 2022 All right reserved
             </Copyright>
             <List>
-                <First><a href='#'>Daily Horoscope</a></First>
-                <Second><a href='#'>Birth Rashi</a></Second>
-                <Third><a href='#'>Birth Day</a></Third>
-                <Fourth><a href='#'>Indian Name Calculator</a></Fourth>
+                <First><Link to='/daily-horoscope'>Daily Horoscope</Link></First>
+                <Second><Link to='/birth-rashi'>Birth Rashi</Link></Second>
+                <Third><Link to='/birth-day'>Birth Day</Link></Third>
+                <Fourth><Link to='/indian-name-calculator'>Indian Name Calculator</Link></Fourth>
             </List>
         </Footer>
     </Wrap>
