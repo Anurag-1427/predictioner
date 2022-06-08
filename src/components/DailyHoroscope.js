@@ -1,826 +1,200 @@
-// import React, { useState, useReducer } from "react";
-// import styled from "styled-components";
-// import Navbar from "./Navbar";
-// // import { useFormik } from "formik";
-
-// function DailyHoroscope() {
-// //   const formik = useFormik({
-// //     initialValues: {
-// //       name: "",
-// //       email: "",
-// //       channel: "",
-// //     },
-// //     onSubmit: values => {
-// //         console.log('Form data', values)
-// //     }
-// //   });
-
-//   const formReducer = (state, event) => {
-//     return {
-//       ...state,
-//       [event.name]: event.value
-//     }
-//    }
-
-//   const [formData, setFormData] = useReducer(formReducer, {});
-//   const [submitting, setSubmitting] = useState(false);
-//   const handleSubmit = event => {
-//     event.preventDefault();
-//    setSubmitting(true);
-
-// //    setTimeout(() => {
-// //      setSubmitting(false);
-// //    }, 3000)
-//  }
-
-//  const handleChange = event => {
-//     setFormData({
-//       name: event.target.name,
-//       value: event.target.value,
-//     });
-//   }
-
-// //   console.log('Form Values', formik.values);
-//   return (
-//     <Wrapper>
-//       <Navbar />
-//       <ContentHoroscope>
-//         <Form>
-//           <Inputs>
-//             <form onSubmit={handleSubmit}>
-//               <label htmlFor="dob">Date of Birth</label>
-//               <br />
-//               <input
-//                 type="number"
-//                 id="dob"
-//                 name="dob"
-//                 // onChange={formik.handleChange}
-//                 onChange={handleChange}
-//                 // value={formik.values.name}
-//               />
-//               <br />
-//               <label htmlFor="mob">Month of Birth</label>
-//               <br />
-//               <input
-//                 type="number"
-//                 id="mob"
-//                 name="mob"
-//                 onChange={handleChange}
-//               />
-//               <br />
-//               <label htmlFor="mob">Year of Birth</label>
-//               <br />
-//               <input
-//                 type="number"
-//                 id="yob"
-//                 name="yob"
-//                 onChange={handleChange}
-//               />
-//               <br />
-//               <label htmlFor="mob">Current Year</label>
-//               <br />
-//               <input
-//                 type="number"
-//                 id="cy"
-//                 name="cy"
-//                 onChange={handleChange}
-//               />
-//               <br />
-//               <label htmlFor="mob">Current Month</label>
-//               <br />
-//               <input
-//                 type="number"
-//                 id="cm"
-//                 name="cm"
-//                 onChange={handleChange}
-//               />
-//               <br />
-//               <label htmlFor="mob">Current Date</label>
-//               <br />
-//               <input
-//                 type="number"
-//                 id="cd"
-//                 name="cd"
-//                 onChange={handleChange}
-//               />
-//               <br />
-//               <label htmlFor="mob">Current Day</label>
-//               <br />
-//               <input
-//                 type="number"
-//                 id="cday"
-//                 name="cday"
-//                 onChange={handleChange}
-//               />
-//               <br />
-
-//               {/* <label htmlFor="email">E-mail</label>
-//               <br />
-//               <input
-//                 type="email"
-//                 id="email"
-//                 name="email"
-//                 onChange={handleChange}
-//                 // value={formik.values.email}
-//               />
-//               <br />
-
-//               <label htmlFor="channel">Channel</label>
-//               <br />
-//               <input
-//                 type="text"
-//                 id="channel"
-//                 name="channel"
-//                 onChange={handleChange}
-//                 // value={formik.values.channel}
-//               />
-//               <br /> */}
-
-//               <button type="submit">Submit</button>
-//             </form>
-//           </Inputs>
-//         </Form>
-//         <Result>Result
-//         {submitting &&
-//        <div>Submtting Form...
-//            You are submitting the following:
-//          <ul>
-//            {Object.entries(formData).map(([name, value]) => (
-//              <li key={name}><strong>{name}</strong>:{value.toString()}</li>
-//            ))}
-//            <li>{Object.entries(formData).forEach(value => {
-//                 map.set(value, 'value'+ value);
-//               })
-//            }</li>
-//          </ul>
-//        </div>
-//      }
-//         </Result>
-//       </ContentHoroscope>
-//     </Wrapper>
-//   );
-// }
-
-// export default DailyHoroscope;
-
-// const Wrapper = styled.div`
-//   width: 100vw;
-//   height: 100vh;
-//   overflow: hidden;
-// `;
-// const ContentHoroscope = styled.div`
-//   width: 100%;
-//   height: 100%;
-//   border: 1px solid black;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-// `;
-// const Form = styled.div`
-//   border: 1px solid black;
-//   width: 50%;
-//   height: 100%;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-// `;
-// const Inputs = styled.div`
-//   border: 1px solid black;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   form {
-//     flex-direction: column;
-//   }
-// `;
-// const Result = styled.div`
-//   border: 1px solid black;
-//   width: 50%;
-//   height: 100%;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-// `;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// import React, { useState, useReducer } from "react";
-// import styled from "styled-components";
-// import Navbar from "./Navbar";
-
-// function DailyHoroscope() {
-//   // const formReducer = (state, event) => {
-//   //       return {
-//   //         ...state,
-//   //         [event.name]: event.value
-//   //       }
-//   // }
-    
-// //   const [formData, setFormData] = useReducer(formReducer, {});
-// //   const [submitting, setSubmitting] = useState(false);
-// //   const handleSubmit = event => {
-// //     event.preventDefault();
-// //     setSubmitting(true);
-
-// // //    setTimeout(() => {
-// // //      setSubmitting(false);
-// // //    }, 3000)
-// // }
-//   // const handleChange = event => {
-//   //       setFormData({
-//   //         name: event.target.name,
-//   //         value: event.target.value,
-//   //       });
-//   //     }
-//   const [dob, setDob] = useState();
-//   const [mob, setMob] = useState();
-//   const [yob, setYob] = useState();
-//   const [cy, setCy] = useState();
-//   const [cm, setCm] = useState();
-//   const [cd, setCd] = useState();
-//   const [cday, setCday] = useState();
-
-//   const [actualDob, setActualDob] = useState();
-//   const [actualMob, setActualMob] = useState();
-//   const [actualYob, setActualYob] = useState();
-//   const [actualCy, setActualCy] = useState();
-//   const [actualCm, setActualCm] = useState();
-//   const [actualCd, setActualCd] = useState();
-//   const [actualCday, setActualCday] = useState();
-//   const handleChange1 = (event) => {
-//     console.log(typeof event.target.value);
-//     setDob(event.target.value); 
-//     var temp = Number(setDob(event.target.value)); 
-//   }
-//   const handleChange2 = (event) => {
-//     console.log(typeof event.target.value);
-//     setMob(event.target.value);
-//   }
-//   const handleChange3 = (event) => {
-//     console.log(typeof event.target.value);
-//     setYob(event.target.value);
-//   }
-//   const handleChange4 = (event) => {
-//     console.log(typeof event.target.value);
-//     setCy(event.target.value);
-//   }
-//   const handleChange5 = (event) => {
-//     console.log(typeof event.target.value);
-//     setCm(event.target.value);
-//   }
-//   const handleChange6 = (event) => {
-//     console.log(typeof event.target.value);
-//     setCd(event.target.value);
-//   }
-//   const handleChange7 = (event) => {
-//     console.log(typeof event.target.value);
-//     setCday(event.target.value);
-//   }
-//   const handleSubmit = (event) => {
-//     event.preventDefault();
-//     setActualDob(dob);
-//     setActualMob(mob);
-//     setActualYob(yob);
-//     setActualCy(cy);
-//     setActualCm(cm);
-//     setActualCd(cd);
-//     setActualCday(cday);
-//   }
-//   return (
-//     <Wrapper>
-//       <Navbar />
-//       <ContentHoroscope>
-//         <Form>
-//           <Inputs>
-//             <form>
-//               <label htmlFor="dob">Date of Birth</label><br />
-//               <input type="number" id="dob" name="dob" onChange={handleChange1} value={dob} /> <br />
-              
-//               <label htmlFor="mob">Month of Birth</label> <br />
-//               <input type="number" id="mob" name="mob" onChange={handleChange2} value={mob} /> <br />
-              
-//               <label htmlFor="yob">Year of Birth</label> <br />
-//               <input type="number" id="yob" name="yob" onChange={handleChange3} value={yob} /> <br />
-              
-//               <label htmlFor="cy">Current Year</label> <br />
-//               <input type="number" id="cy" name="cy" onChange={handleChange4} value={cy} /> <br />
-              
-//               <label htmlFor="cm">Current Month</label> <br />
-//               <input type="number" id="cm" name="cm" onChange={handleChange5} value={cm} /> <br />
-              
-//               <label htmlFor="cd">Current Date</label> <br />
-//               <input type="number" id="cd" name="cd" onChange={handleChange6} value={cd} /> <br />
-              
-//               <label htmlFor="cday">Current Day</label><br />
-//               <input type="number" id="cday" name="cday" onChange={handleChange7} value={cday} /> <br />
-              
-//               <button type="submit" onClick={handleSubmit}>Submit</button>
-//             </form>
-//           </Inputs>
-//         </Form>
-//         <Result>Result {actualDob}+{actualMob}+{actualYob}+{actualCy}+{actualCm}+{actualCd}+{actualCday}</Result>
-//       </ContentHoroscope>
-//     </Wrapper>
-//   );
-// }
-
-// export default DailyHoroscope;
-
-// const Wrapper = styled.div`
-//   width: 100vw;
-//   height: 100vh;
-//   overflow: hidden;
-// `;
-// const ContentHoroscope = styled.div`
-//   width: 100%;
-//   height: 100%;
-//   border: 1px solid black;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-// `;
-// const Form = styled.div`
-//   border: 1px solid black;
-//   width: 50%;
-//   height: 100%;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-// `;
-// const Inputs = styled.div`
-//   border: 1px solid black;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   form {
-//     flex-direction: column;
-//   }
-// `;
-// const Result = styled.div`
-//   border: 1px solid black;
-//   width: 50%;
-//   height: 100%;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-// `;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// import React, { useState, useRef } from "react";
-// import styled from "styled-components";
-// import Navbar from "./Navbar";
-
-// const DailyHoroscope = () => {
-//   const [dobi, setDob] = useState();
-//   const [mobi, setMob] = useState();
-//   const [yobi, setYob] = useState();
-//   const [cyi, setCy] = useState();
-//   const [cmi, setCm] = useState();
-//   const [cdi, setCd] = useState();
-//   const [cdayi, setCday] = useState();
-
-//   const dob = useRef(0);
-//   const mob = useRef(0);
-//   const yob = useRef(0);
-//   const cy = useRef(0);
-//   const cm = useRef(0);
-//   const cd = useRef(0);
-//   const cday = useRef(0);
-
-//   var dobirth, intDoBirth;
-//   var mobirth, intMoBirth;
-//   var yobirth, intYoBirth;
-//   var cyear, intCyear;
-//   var cmonth, intCmonth;
-//   var cdate, intCdate;
-//   var cuday, intCday;
-
-//   let temp = parseInt(dobi, 10)
-//   console.log(typeof temp);
-//   let temp2 = parseInt(mobi, 10)
-//   console.log(typeof temp2);
-//   let temp3 = parseInt(yobi, 10)
-//   console.log(typeof temp3);
-//   let temp4 = parseInt(cyi, 10)
-//   console.log(typeof temp4);
-//   let temp5 = parseInt(cmi, 10)
-//   console.log(typeof temp5);
-//   let temp6 = parseInt(cdi, 10)
-//   console.log(typeof temp6);
-//   let temp7 = parseInt(cdayi, 10)
-//   console.log(typeof temp7);
-//   const submitForm = (e) => {
-//     e.preventDefault();
-//     // console.log(typeof dob.current.value);
-//     dobirth = dob.current.value;
-//     setDob(dobirth);
-//     // console.log(typeof dobi);
-//     // intDoBirth = parseInt(dobirth);
-//     // console.log(intDoBirth);
-
-//     mobirth = mob.current.value;
-//     setMob(mobirth);
-//     // intMoBirth = parseInt(mobirth);
-//     yobirth = yob.current.value;
-//     setYob(yobirth);
-//     // intYoBirth = parseInt(yobirth);
-//     cyear = cy.current.value;
-//     setCy(cyear);
-//     // intCyear = parseInt(cyear);
-//     cmonth = cm.current.value;
-//     setCm(cmonth);
-//     // intCmonth = parseInt(cmonth);
-//     cdate = cd.current.value;
-//     setCd(cdate);
-//     // intCdate = parseInt(cdate);
-//     cuday = cday.current.value;
-//     setCday(cday);
-//     // intCday = parseInt(cuday);
-//   }
+import React, {useState} from 'react'
+import styled from 'styled-components'
+import axios from 'axios';
+import Navbar from './Navbar';
+
+function BirthRashi() {
+  const apiKey = 'e9adef17-d0d3-59f8-954c-8356f2e80bfb';
+  const [rashi, setRashi] = useState();
+  const [dob, setDob] = useState("");
+  const [rashiTodayPrediction, setRashiTodayPrediction] = useState();
+  const [career, setCareer] = useState();
+  const [family, setFamily] = useState();
+  const [finances, setFinances] = useState();
+  const [friends, setFriends] = useState();
+  const [health, setHealth] = useState();
+  const [luckyColor, setLuckyColor] = useState();
+  const [physique, setPhysique] = useState();
+  const [relationship, setRelationship] = useState();
   
-//   return (
-//     <Wrapper>
-//       <Navbar />
-//       <ContentHoroscope>
-//         <Form>
-//           <Inputs>
-//             <form action="" onSubmit={submitForm}>
-//               <label htmlFor="dob">Enter your Date of Birth</label> <br />
-//               <input type="number" id="dob" ref={dob} /> <br />
-
-//               <label htmlFor="mob">Enter your Month of Birth</label> <br />
-//               <input type="number" id="mob" ref={mob} /> <br />
-
-//               <label htmlFor="yob">Enter your Year of Birth</label> <br />
-//               <input type="number" id="yob" ref={yob} /> <br />
-
-//               <label htmlFor="cy">Enter the Current Year</label> <br />
-//               <input type="number" id="cy" ref={cy} /> <br />
-
-//               <label htmlFor="cm">Enter the current Month</label> <br />
-//               <input type="number" id="cm" ref={cm} /> <br />
-
-//               <label htmlFor="cd">Enter the Current Date</label> <br />
-//               <input type="number" id="cd" ref={cd} /> <br />
-
-//               <label htmlFor="cday">Enter the Current Day</label> <br />
-//               <input type="number" id="cday" ref={cday} /> <br />
-//               <button>Submit</button>
-//             </form>
-//           </Inputs>
-//         </Form>
-//         <Result>Result {dobi} {mobi} {yobi} {cyi} {cmi} {cdi} {cdayi}
-//         </Result>
-//       </ContentHoroscope>
-//     </Wrapper>
-//   );
-// }
-
-// export default DailyHoroscope;
-
-// const Wrapper = styled.div`
-//   width: 100vw;
-//   height: 100vh;
-//   overflow: hidden;
-// `;
-// const ContentHoroscope = styled.div`
-//   width: 100%;
-//   height: 100%;
-//   border: 1px solid black;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-// `;
-// const Form = styled.div`
-//   border: 1px solid black;
-//   width: 50%;
-//   height: 100%;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-// `;
-// const Inputs = styled.div`
-//   border: 1px solid black;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   form {
-//     flex-direction: column;
-//   }
-// `;
-// const Result = styled.div`
-//   border: 1px solid black;
-//   width: 50%;
-//   height: 100%;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-// `;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-import React, { useState, useRef, useEffect } from "react";
-import styled from "styled-components";
-import Navbar from "./Navbar";
-
-const DailyHoroscope = () => {
-  const [dobi, setDob] = useState();
-  const [mobi, setMob] = useState();
-  const [yobi, setYob] = useState();
-  const [cyi, setCy] = useState();
-  const [cmi, setCm] = useState();
-  const [cdi, setCd] = useState();
-  const [cdayi, setCday] = useState();
-
-  const [ni, setNi] = useState();
-
-  const dob = useRef(0);
-  const mob = useRef(0);
-  const yob = useRef(0);
-  const cy = useRef(0);
-  const cm = useRef(0);
-  const cd = useRef(0);
-  const cday = useRef(0);
-  
-  var dobirth;
-  var mobirth;
-  var yobirth;
-  var cyear;
-  var cmonth;
-  var cdate;
-  var cuday;
-  
-
-  let temp = parseInt(dobi, 10)
-  let temp2 = parseInt(mobi, 10)
-  let temp3 = parseInt(yobi, 10)
-  let temp4 = parseInt(cyi, 10)
-  let temp5 = parseInt(cmi, 10)
-  let temp6 = parseInt(cdi, 10)
-  let temp7 = parseInt(cdayi, 10)
-  let n = temp+temp2+temp3+temp4+temp5+temp6+temp7;
-  console.log(n);
-
-  // const getSum = (ni) => {
-  //   var sum = 0;
-  //   while (ni !== 0) {
-  //     sum = sum + ni % 10;
-  //     ni = ni / 10;
-  //   }
-  //   return sum;
-  // }
-  // console.log(getSum());
-
-  // let result = getSum(n);
-  // let resulted = getSum(result);
-  // console.log(resulted);
-
-
-
-  // console.log(typeof temp);
-// useEffect(()=>{
-// setNi(getSum());
-
-
-// },[])
-  
-  
-  
-  const submitForm = (e) => {
-    e.preventDefault();
-    // console.log(typeof dob.current.value);
-    dobirth = dob.current.value;
-    setDob(dobirth);
-    // console.log(typeof dobi);
-    // intDoBirth = parseInt(dobirth);
-    // console.log(intDoBirth);
-
-    mobirth = mob.current.value;
-    setMob(mobirth);
-
-    yobirth = yob.current.value;
-    setYob(yobirth);
-
-    cyear = cy.current.value;
-    setCy(cyear);
-
-    cmonth = cm.current.value;
-    setCm(cmonth);
-
-    cdate = cd.current.value;
-    setCd(cdate);
-
-    cuday = cday.current.value;
-    setCday(cuday);
-
-
+  const fetch = ()=>{
+      axios.get(`https://api.vedicastroapi.com/json/prediction/dailymoon?zodiac=${rashi}&show_same=true&date=${dob}&type=TYPE&api_key=${apiKey}`)
+      .then((response)=>{
+          console.log(response);
+          setRashiTodayPrediction(response.data.response.bot_response);
+          setCareer(response.data.response.career);
+          setFamily(response.data.response.family);
+          setFinances(response.data.response.finances);
+          setFriends(response.data.response.friends);
+          setHealth(response.data.response.health);
+          setLuckyColor(response.data.response.luckyColor);
+          setPhysique(response.data.response.physique);
+          setRelationship(response.data.response.relationship);
+      })
   }
   
-  return (
+
+  return <>
+    <Navbar />
     <Wrapper>
-      <Navbar />
-      <ContentHoroscope>
-        <Form>
-          <Inputs>
-            <form action="" onSubmit={submitForm}>
-              <label htmlFor="dob">Enter your Date of Birth</label> <br />
-              <input type="number" id="dob" ref={dob} /> <br />
-
-              <label htmlFor="mob">Enter your Month of Birth</label> <br />
-              <input type="number" id="mob" ref={mob} /> <br />
-
-              <label htmlFor="yob">Enter your Year of Birth</label> <br />
-              <input type="number" id="yob" ref={yob} /> <br />
-
-              <label htmlFor="cy">Enter the Current Year</label> <br />
-              <input type="number" id="cy" ref={cy} /> <br />
-
-              <label htmlFor="cm">Enter the current Month</label> <br />
-              <input type="number" id="cm" ref={cm} /> <br />
-
-              <label htmlFor="cd">Enter the Current Date</label> <br />
-              <input type="number" id="cd" ref={cd} /> <br />
-
-              <label htmlFor="cday">Enter the Current Day</label> <br />
-              <input type="number" id="cday" ref={cday} /> <br />
-              <button>Submit</button>
-            </form>
-          </Inputs>
-        </Form>
-        <Result>Result {dobi} {mobi} {yobi} {cyi} {cmi} {cdi} {cdayi} {ni}
-        </Result>
-      </ContentHoroscope>
+      <h3>Daily Horoscope</h3>
+        <Inputs>
+            <One>
+                <label htmlFor="dob">Today's Date</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="text" id='dob' value={dob} onChange={(e) => setDob(e.target.value)} />
+            </One>
+            <One>
+                <p>Date of Birth should be in this pattern: DD/MM/YYYY</p>
+            </One>
+            
+        </Inputs>
+        <Upper>
+            <Box>
+            <img src={`https://cdn.iconscout.com/icon/free/png-64/aries-horoscope-astrology-zodiac-sign-symbol-20965.png`} alt="ariesImage" id='aries-img' />
+                <input type="radio" value="1" id="aries" onChange={e=>setRashi(e.target.value)} name="rashi" />
+                <label htmlFor="aries">Aries</label>
+            </Box>
+            <Box>
+                <img src={`https://cdn.iconscout.com/icon/free/png-64/taurus-horoscope-astrology-zodiac-sign-symbol-20958.png`} alt="taurasImage" id='taurus-img' />
+                <input type="radio" value="2" id="tauras" onChange={e=>setRashi(e.target.value)} name="rashi"/>
+                <label htmlFor="taurus">Taurus</label>
+            </Box>
+            <Box>
+                <img src={`https://cdn.iconscout.com/icon/free/png-64/gemini-horoscope-astrology-zodiac-sign-symbol-20947.png`} alt="geminiImage" />
+                <input type="radio" value="3" id="gemini" onChange={e=>setRashi(e.target.value)} name="rashi"/>
+                <label htmlFor="gemini">Gemini</label>
+            </Box>
+            <Box>
+                <img src={`https://cdn.iconscout.com/icon/free/png-64/cancer-zodiac-horoscope-astrology-sign-symbol-20962.png`} alt="cancerImage" />
+                <input type="radio" value="4" id="cancer" onChange={e=>setRashi(e.target.value)} name="rashi"/>
+                <label htmlFor="cancer">Cancer</label>
+            </Box>
+            <Box>
+                <img src={`https://cdn.iconscout.com/icon/free/png-64/leo-zodiac-horoscope-astrology-sign-symbol-20955.png`} alt="leoImage" />
+                <input type="radio" value="5" id="leo" onChange={e=>setRashi(e.target.value)} name="rashi"/>
+                <label htmlFor="leo">Leo</label>
+            </Box>
+            <Box>
+                <img src={`https://cdn.iconscout.com/icon/free/png-64/virgo-zodiac-horoscope-astrology-sign-symbol-20959.png`} alt="virgoImage" />
+                <input type="radio" value="6" id="virgo" onChange={e=>setRashi(e.target.value)} name="rashi"/>
+                <label htmlFor="virgo">Virgo</label>
+            </Box>
+            <Box>
+                <img src={`https://cdn.iconscout.com/icon/free/png-64/libra-zodiac-horoscope-astrology-sign-symbol-20954.png`} alt="libraImage" />
+                <input type="radio" value="7" id="libra" onChange={e=>setRashi(e.target.value)} name="rashi"/>
+                <label htmlFor="libra">Libra</label>
+            </Box>
+            <Box>
+                <img src={`https://cdn.iconscout.com/icon/free/png-64/scorpius-3570663-2993149.png`} alt="scorpiusImage" />
+                <input type="radio" value="8" id="scorpius" onChange={e=>setRashi(e.target.value)} name="rashi"/>
+                <label htmlFor="libra">Scorpius</label>
+            </Box>
+            <Box>
+                <img src={`https://cdn.iconscout.com/icon/free/png-64/sagitarius-2754243-2286887.png`} alt="sagitariusImage" />
+                <input type="radio" value="9" id="Sagittarius" onChange={e=>setRashi(e.target.value)} name="rashi"/>
+                <label htmlFor="sagittarius">Sagittarius</label>
+            </Box>
+            <Box>
+                <img src={`https://cdn.iconscout.com/icon/free/png-64/capricorn-horoscope-zodiac-astrology-sign-symbol-20964.png`} alt="capricornusImage" />
+                <input type="radio" value="10" id="Capricornus" onChange={e=>setRashi(e.target.value)} name="rashi"/>
+                <label htmlFor="capricornus">Capricornus</label>
+            </Box>
+            <Box>
+                <img src={`https://cdn.iconscout.com/icon/free/png-64/aquarius-zodiac-horoscope-astrology-sign-symbol-20946.png`} alt="aquariusImage" />
+                <input type="radio" value="11" id="aquarius" onChange={e=>setRashi(e.target.value)} name="rashi"/>
+                <label htmlFor="aquarius">Aquarius</label>
+            </Box>
+            <Box>
+                <img src={`https://cdn.iconscout.com/icon/premium/png-64-thumb/pieces-1506663-1279746.png`} alt="piecesImage" />
+                <input type="radio" value="12" id="pisces" onChange={e=>setRashi(e.target.value)} name="rashi"/>
+                <label htmlFor="pisces">Pisces</label>
+            </Box>
+        </Upper>
+        <ButtonDiv>
+            <Button onClick={fetch}>Submit</Button>
+        </ButtonDiv>
+        <Lower>
+            <h3>Kindly, refresh before seeing prediction</h3>
+            <strong>Daily Horoscope is: </strong><br />
+            {rashiTodayPrediction}<br />
+            Career: {career}<br />
+            Family: {family}<br />
+            Finances: {finances}<br />
+            Friends: {friends}<br />
+            Health: {health}<br />
+            Your Lucky Color: {luckyColor}<br />
+            Physique: {physique}<br />
+            Relationship: {relationship}<br />
+        </Lower>
     </Wrapper>
-  );
+  </>
 }
 
-export default DailyHoroscope;
+export default BirthRashi
 
 const Wrapper = styled.div`
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-`;
-const ContentHoroscope = styled.div`
-  width: 100%;
-  height: 100%;
-  border: 1px solid black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
-const Form = styled.div`
-  border: 1px solid black;
-  width: 50%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    width: 100vw;
+    height: 85vh;
+    // border: 1px solid black;
+    h3{
+      text-align: center;
+    }
 `;
 const Inputs = styled.div`
-  border: 1px solid black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  form {
+    // border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
-  }
 `;
-const Result = styled.div`
-  border: 1px solid black;
-  width: 50%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+const One = styled.div`
+    display: flex;
+    // margin: 0.5%;
+    margin-top: 0.5%;
+    input{
+        margin-right: 5px;
+    }
+    p{
+        color: grey;
+        font-size: 12px;
+    }
+`;
+const Upper = styled.div`
+    // height: 10vh;
+    // border: 1px solid black;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    align-itmes: center;
+`;
+const Box = styled.div`
+    // border: 1px solid black;
+    height: 10vh;
+    width: 100%;
+    // padding: 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`;
+const ButtonDiv = styled.div`
+    display:flex;
+    justify-content: center;
+    align-items: center;
+`;
+const Button = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 1px solid black;
+    width: 250px;
+    border-radius: 50px;    
+    padding: 0.4%;
+    font-size: 18px;
+`;
+const Lower = styled.div`
+    // border: 1px solid black;
+    h3{
+        text-align: center;
+    }
 `;
