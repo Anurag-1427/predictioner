@@ -50,7 +50,6 @@ export default function BirthDay() {
         <Wrapdiv>
           <Navbar />
           <Upper>
-          {/* <button onClick={() => window.location.reload()}>Refresh</button> */}
             <div>
             <label htmlFor="name">Your Full name</label>
             <input type="text" id="name"  onChange={handleChangeName} name="name" /><br />

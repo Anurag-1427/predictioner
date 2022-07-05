@@ -4,7 +4,7 @@ import axios from 'axios';
 import Navbar from './Navbar'
 
 function IndianNameCalculator() {
-  const apiKey = 'e9adef17-d0d3-59f8-954c-8356f2e80bfb';
+  const apiKey = '52eef674-932f-5ea1-b998-14f974be48e0';
   const [name, setName] = useState();
   const [date, setDate] = useState();
   const [agenda, setAgenda] = useState();
